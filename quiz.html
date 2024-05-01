@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="w-[100%]">
+        <div class="w-[600px] mx-auto text-center">
+
+            <div class="my-3">
+                <button class="p-1 px-4 bg-gray-800 text-white font-bold text-[18px]" id="startBtn">Start Quiz</button>
+            </div>
+
+            <div class="w-[600px] h-[450px] hidden mt-5 border-2 border-red-500 p-3" id="quiz_container">
+                <div class="heading bg-gray-800 p-3 text-white">
+                    <div class="text-center my-2">
+                        <h2 class="text-[25px] font-bold">Quiz App</h2>
+                    </div>
+                    <div class="flex justify-between">
+                        <div>
+                            <span id="questionNum">Question 1/10</span>
+                        </div>
+                        <div>
+                            <span id="currScore">Score: 0 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question my-3 text-left">
+                    <span class="font-bold" id="questionText">What is 2 + 2?</span>
+                </div>
+
+                <div class="options">
+                    <div class="option p-2 border-2 my-2 text-left">3</div>
+                    <div class="option p-2 border-2 my-2 text-left">4</div>
+                    <div class="option p-2 border-2 my-2 text-left">5</div>
+                    <div class="option p-2 border-2 my-2 text-left">8</div>
+                </div>
+
+                <div class="my-3 text-center">
+                    <button class="p-1 px-5 bg-gray-800 text-white text-[20px]" id="nextBtn">Next</button>
+                </div>
+            </div>
+
+            <div class="scoreboard w-[250px] h-[170px] mt-5 border-4 p-3 text-center hidden">
+                <h2 class="font-bold text-[22px]">Quiz Completed</h2>
+                <p class="font-bold my-3">Your Score: <span id="finalScore">0</span></p>
+                <div class="my-3 text-center">
+                    <button class="p-1 px-5 bg-gray-800 text-white text-[20px]" id="restartBtn">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
